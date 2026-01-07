@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Buku - BookNest</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="shadow-sm sticky-top bg-white" id="mainHeader">
+  </header>
+   <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo-bookstore.png" alt="Logo BookNest" width="100" class="me-2">
+        <span class="fw-bold">BookNest</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="index.html">
+        <i class="bi bi-house-door"></i> Beranda
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="katalog.html">
+        <i class="bi bi-grid"></i> Katalog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="promo.html">
+        <i class="bi bi-tag"></i> Promo
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="testimoni.html">
+        <i class="bi bi-chat-quote"></i> Testimoni
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="tentang.html">
+        <i class="bi bi-info-circle"></i> Tentang
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="kontak.html">
+        <i class="bi bi-envelope"></i> Kontak
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="faq.html">
+        <i class="bi bi-question-circle"></i> FAQ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="bantuan.html">
+        <i class="bi bi-life-preserver"></i> Bantuan
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-primary mx-1" href="keranjang.html">
+        <i class="bi bi-cart"></i> Keranjang
+      </a>
+    </li>
+  </ul>
+  <button id="btnDarkMode" class="btn btn-sm btn-outline-secondary ms-lg-3">
+    <i class="bi bi-moon"></i> Mode Gelap
+  </button>
+</div>
+</nav>
+
+  <main class="flex-fill">
+    <section class="container">
+      <article class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="images/buku1.jpg" alt="Belajar HTML & CSS Dasar" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-8">
+          <h1 class="h3 fw-bold">Belajar HTML & CSS Dasar</h1>
+          <p class="text-muted">Penulis: Nama Penulis | Penerbit: Nama Penerbit</p>
+          <p>
+            Buku ini membahas dasar-dasar pembuatan halaman web menggunakan HTML dan CSS
+            dengan contoh yang mudah dipahami untuk pemula.
+          </p>
+          <p class="text-muted text-decoration-line-through mb-0">Rp100.000</p>
+          <p class="fw-bold fs-4">Rp75.000</p>
+
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <a href="katalog.html" class="btn btn-outline-secondary">Kembali ke Katalog</a>
+          </div>
+
+          <section class="mb-3">
+            <h2 class="h5 fw-bold">Ringkasan Isi Buku</h2>
+            <ul>
+              <li>Pengenalan HTML</li>
+              <li>Struktur dasar dokumen web</li>
+              <li>Pengenalan CSS dan cara penulisan</li>
+              <li>Layout sederhana menggunakan CSS</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="h5 fw-bold">Referensi Tambahan</h2>
+            <p>
+              Kamu juga bisa belajar HTML & CSS dari dokumentasi resmi di
+              <a href="https://developer.mozilla.org/id/docs/Learn" target="_blank">MDN Web Docs</a>.
+            </p>
+          </section>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="py-4 bg-dark text-light mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2025 BookNest.</p>
+      <a href="index.html" class="text-decoration-none text-light">Kembali ke Beranda</a>
+    </div>
+  </footer>
+
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

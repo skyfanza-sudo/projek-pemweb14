@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog Buku - BookNest</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<header class="shadow-sm sticky-top bg-white" id="mainHeader">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo-bookstore.png" alt="Logo BookNest" width="100" class="me-2">
+        <span class="fw-bold">BookStore</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="index.html">
+        <i class="bi bi-house-door"></i> Beranda
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="katalog.html">
+        <i class="bi bi-grid"></i> Katalog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="promo.html">
+        <i class="bi bi-tag"></i> Promo
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="testimoni.html">
+        <i class="bi bi-chat-quote"></i> Testimoni
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="tentang.html">
+        <i class="bi bi-info-circle"></i> Tentang
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="kontak.html">
+        <i class="bi bi-envelope"></i> Kontak
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="faq.html">
+        <i class="bi bi-question-circle"></i> FAQ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="bantuan.html">
+        <i class="bi bi-life-preserver"></i> Bantuan
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-primary mx-1" href="keranjang.html">
+        <i class="bi bi-cart"></i> Keranjang
+      </a>
+    </li>
+  </ul>
+  <button id="btnDarkMode" class="btn btn-sm btn-outline-secondary ms-lg-3">
+    <i class="bi bi-moon"></i> Mode Gelap
+  </button>
+</div>
+    </nav>
+  </header>
+
+<main class="flex-fill">
+    <section class="container">
+      <header class="mb-4">
+        <h1 class="h3 fw-bold">Katalog Buku</h1>
+        <p class="text-muted mb-0">
+          Pilih kategori untuk menemukan buku yang kamu butuhkan.
+        </p>
+      </header>
+
+  <input type="text" id="searchBuku" class="form-control mb-4" placeholder="Cari judul buku...">
+
+  <div class="mb-4 text-center">
+  <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="all">Semua</button>
+  <button class="btn btn-outline-primary mx-1 filter-btn" data-filter="pelajaran">Pelajaran</button>
+  <button class="btn btn-outline-primary mx-1 filter-btn" data-filter="novel">Novel</button>
+  <button class="btn btn-outline-primary mx-1 filter-btn" data-filter="fiksi">Fiksi</button>
+  <button class="btn btn-outline-primary mx-1 filter-btn" data-filter="komik">Komik</button>
+</div>
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="pelajaran">
+          <div class="card book-card h-100 hover-rise position-relative">
+          <span class="badge bg-info position-absolute m-2">Pelajaran</span>
+          <img src="images/BUKU.PELAJARAN.01.webp" class="card-img-top" alt="Belajar HTML & CSS">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Belajar HTML & CSS Dasar</h3>
+            <p class="card-text flex-grow-1">
+              Panduan visual untuk memahami struktur dan styling web.
+            </p>
+            <p class="fw-bold mb-2">Rp75.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    <article class="col-md-4 buku-item"
+         data-judul="JavaScript untuk Pemula"
+         data-kategori="pelajaran">
+        <div class="card book-card h-100 hover-rise position-relative">
+         <span class="badge bg-info position-absolute m-2">Pelajaran</span>
+          <img src="images/BUKU.PELAJARAN.02.jpg" class="card-img-top" alt="JavaScript untuk Pemula">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">JavaScript untuk Pemula</h3>
+            <p class="card-text flex-grow-1">
+              Kuasai dasar-dasar logika dan interaksi web dengan JavaScript.
+            </p>
+            <p class="fw-bold mb-2">Rp90.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('JavaScript untuk Pemula', 90000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-4 buku-item"
+         data-judul="Web Design Modern"
+         data-kategori="pelajaran">
+        <div class="card book-card h-100 hover-rise position-relative">
+         <span class="badge bg-info position-absolute m-2">Pelajaran</span>
+          <img src="images/BUKU.PELAJARAN.03.jpg" class="card-img-top" alt="Web Design Modern">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Web Design Modern</h3>
+            <p class="card-text flex-grow-1">
+              Belajar membuat tampilan web modern dan responsif.
+            </p>
+            <p class="fw-bold mb-2">Rp85.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Web Design Modern', 85000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="row g-4 mt-5">
+      <article class="col-md-4 buku-item"
+         data-judul="Sendiri By-Tere Liye"
+         data-kategori="novel">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Novel</span>
+          <img src="imageS/BUKU.NOVEL.01.jpeg" class="card-img-top" alt="Belajar HTML & CSS">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Sendiri By-Tere Liye</h3>
+            <p class="card-text flex-grow-1">
+              Buku yang digadang gadang bikin Melowwww....
+            </p>
+            <p class="fw-bold mb-2">Rp105.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Sendiri By-Tere Liye', 105000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+     <article class="col-md-4 buku-item"
+         data-judul="Bandung After Rain"
+         data-kategori="novel">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Novel</span>
+          <img src="images/BUKU.FIKSI.04.webp" class="card-img-top" alt="JavaScript untuk Pemula">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Bandung After Rain</h3>
+            <p class="card-text flex-grow-1">
+              Pilihan Terbaik saat ingin baca buku Bandung After Rain.
+            </p>
+            <p class="fw-bold mb-2">Rp230.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Bandung After Rain', 230000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="novel">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Novel</span>
+          <img src="images/BUKU.NOVEL.03.jpg" class="card-img-top" alt="Web Design Modern">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Web Design Modern</h3>
+            <p class="card-text flex-grow-1">
+              Belajar membuat tampilan web modern dan responsif.
+            </p>
+            <p class="fw-bold mb-2">Rp85.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Web Design Modern', 85000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+        <div class="row g-4 mt-5">
+      <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="fiksi">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Fiksi</span>
+          <img src="images/BUKU.FIKSI.01.png" class="card-img-top" alt="Belajar HTML & CSS">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Belajar HTML & CSS Dasar</h3>
+            <p class="card-text flex-grow-1">
+              Panduan visual untuk memahami struktur dan styling web.
+            </p>
+            <p class="fw-bold mb-2">Rp75.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="fiksi">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Fiksi</span>
+          <img src="images/BUKU.FIKSI.02.jpg" class="card-img-top" alt="JavaScript untuk Pemula">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">JavaScript untuk Pemula</h3>
+            <p class="card-text flex-grow-1">
+              Kuasai dasar-dasar logika dan interaksi web dengan JavaScript.
+            </p>
+            <p class="fw-bold mb-2">Rp90.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('JavaScript untuk Pemula', 90000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="fiksi">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Fiksi</span>
+          <img src="images/BUKU.FIKSI.03.jpg" class="card-img-top" alt="Web Design Modern">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Web Design Modern</h3>
+            <p class="card-text flex-grow-1">
+              Belajar membuat tampilan web modern dan responsif.
+            </p>
+            <p class="fw-bold mb-2">Rp85.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Web Design Modern', 85000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+        <div class="row g-4 mt-5">
+      <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="komik">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Komik</span>
+          <img src="images/BUKU.KOMIK.01.jpg" class="card-img-top" alt="Belajar HTML & CSS">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Belajar HTML & CSS Dasar</h3>
+            <p class="card-text flex-grow-1">
+              Panduan visual untuk memahami struktur dan styling web.
+            </p>
+            <p class="fw-bold mb-2">Rp75.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+     <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="komik">
+        <div class="card book-card h-100 hover-rise">
+           <span class="badge bg-info position-absolute m-2">Pelajaran</span>
+          <img src="images/BUKU.KOMIK.02.jpg" class="card-img-top" alt="JavaScript untuk Pemula">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">JavaScript untuk Pemula</h3>
+            <p class="card-text flex-grow-1">
+              Kuasai dasar-dasar logika dan interaksi web dengan JavaScript.
+            </p>
+            <p class="fw-bold mb-2">Rp90.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('JavaScript untuk Pemula', 90000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-4 buku-item"
+         data-judul="Belajar HTML & CSS Dasar"
+         data-kategori="komik">
+        <div class="card book-card h-100 hover-rise">
+          <img src="images/BUKU.KOMIK.03.webp" class="card-img-top" alt="Web Design Modern">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Web Design Modern</h3>
+            <p class="card-text flex-grow-1">
+              Belajar membuat tampilan web modern dan responsif.
+            </p>
+            <p class="fw-bold mb-2">Rp85.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Web Design Modern', 85000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+        <div class="row g-4 mt-5">
+      <article class="col-md-4 buku-item" data-judul="Belajar HTML & CSS Dasar">
+        <div class="card book-card h-100 hover-rise">
+          <img src="images/html&css.webp" class="card-img-top" alt="Belajar HTML & CSS">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Belajar HTML & CSS Dasar</h3>
+            <p class="card-text flex-grow-1">
+              Panduan visual untuk memahami struktur dan styling web.
+            </p>
+            <p class="fw-bold mb-2">Rp75.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-4 buku-item" data-judul="JavaScript untuk Pemula">
+        <div class="card book-card h-100 hover-rise">
+          <img src="images/java script.jpg" class="card-img-top" alt="JavaScript untuk Pemula">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">JavaScript untuk Pemula</h3>
+            <p class="card-text flex-grow-1">
+              Kuasai dasar-dasar logika dan interaksi web dengan JavaScript.
+            </p>
+            <p class="fw-bold mb-2">Rp90.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('JavaScript untuk Pemula', 90000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-4 buku-item" data-judul="Web Design Modern">
+        <div class="card book-card h-100 hover-rise">
+          <img src="images/bahasa pemograman.jpg" class="card-img-top" alt="Web Design Modern">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5 judul">Web Design Modern</h3>
+            <p class="card-text flex-grow-1">
+              Belajar membuat tampilan web modern dan responsif.
+            </p>
+            <p class="fw-bold mb-2">Rp85.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+              <button class="btn btn-sm btn-primary btn-add-cart"
+                      onclick="addToCart('Web Design Modern', 85000)">
+                Tambah Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+
+      <div class="mt-5">
+        <a href="https://id.wikipedia.org/wiki/Buku" target="_blank">Baca tentang buku di Wikipedia</a>
+      </div>
+    </section>
+  </main>
+
+   <footer class="py-4 bg-dark text-light mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2025 BookNest. Semua hak cipta dilindungi.</p>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="https://www.google.com" target="_blank" class="text-decoration-none text-light">
+          Kunjungi Google
+        </a>
+        <a href="faq.html" class="text-decoration-none text-light">FAQ</a>
+        <a href="bantuan.html" class="text-decoration-none text-light">Pusat Bantuan</a>
+      </div>
+    </div>
+  </footer>
+
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

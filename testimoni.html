@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testimoni - BookNest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="shadow-sm sticky-top bg-white" id="mainHeader">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo-bookstore.png" alt="Logo BookNest" width="100" class="me-2">
+        <span class="fw-bold">BookNest</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="index.html">
+        <i class="bi bi-house-door"></i> Beranda
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="katalog.html">
+        <i class="bi bi-grid"></i> Katalog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="promo.html">
+        <i class="bi bi-tag"></i> Promo
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="testimoni.html">
+        <i class="bi bi-chat-quote"></i> Testimoni
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="tentang.html">
+        <i class="bi bi-info-circle"></i> Tentang
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="kontak.html">
+        <i class="bi bi-envelope"></i> Kontak
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="faq.html">
+        <i class="bi bi-question-circle"></i> FAQ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="bantuan.html">
+        <i class="bi bi-life-preserver"></i> Bantuan
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-primary mx-1" href="keranjang.html">
+        <i class="bi bi-cart"></i> Keranjang
+      </a>
+    </li>
+  </ul>
+  <button id="btnDarkMode" class="btn btn-sm btn-outline-secondary ms-lg-3">
+    <i class="bi bi-moon"></i> Mode Gelap
+  </button>
+</div>
+    </nav>
+  </header>
+<section class="testimoni-section my-5 text-light">
+  <div class="overlay d-flex flex-column align-items-center justify-content-center">
+    <h2 class="h4 fw-bold mb-4">Apa Kata Mereka?</h2>
+    <div id="testimoniCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <blockquote class="blockquote text-center">
+            <p>"Promo BookNest bikin saya bisa beli banyak buku pemrograman dengan harga hemat!"</p>
+            <footer class="blockquote-footer text-light">Ahmad, Mahasiswa SI</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote text-center">
+            <p>"Diskon novel favorit saya, jadi bisa borong sekaligus!"</p>
+            <footer class="blockquote-footer text-light">Zaula, Pecinta Fiksi</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote text-center">
+            <p>"Suka banget baca buku belinya di FA&IZ STORE!!"</p>
+            <footer class="blockquote-footer text-light">Fawaz, Kutu Buku</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <main class="flex-fill">
+  <section class="container">
+    <h1 class="h3 fw-bold mb-4">Apa Kata Pelanggan Kami?</h1>
+
+    <div class="row g-4">
+      <article class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <p>"Pelayanan cepat dan bukunya berkualitas. Sangat puas!"</p>
+          <p class="fw-bold mb-0">— Ahmad Mahasiswa SI</p>
+        </div>
+      </article>
+
+      <article class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <p>"Harga terjangkau dan banyak promo menarik."</p>
+          <p class="fw-bold mb-0">— Zaula Mahasiswa SI</p>
+        </div>
+      </article>
+
+      <article class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <p>"Koleksi bukunya lengkap, terutama buku pemrograman."</p>
+          <p class="fw-bold mb-0">— Fawaz Mahasiswa SI</p>
+        </div>
+      </article>
+    <p class="mt-3">
+      Lihat ulasan buku di 
+      <a href="https://goodreads.com" target="_blank">Goodreads</a>.
+    </p>
+  </section>
+</main>
+
+<footer class="py-4 bg-dark text-light text-center">
+  <p class="mb-0">&copy; 2025 BookNest.</p>
+</footer>
+<script src="js/promo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BookStore - Toko Buku Online</title>
+
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button id="btnTop" class="btn btn-primary btn-top"> ↑
+  </button>
+  <header class="shadow-sm sticky-top bg-white" id="mainHeader">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo-bookstore.png" alt="Logo BookNest" width="100" class="me-2">
+        <span class="fw-bold">BookStore</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="index.html">
+        <i class="bi bi-house-door"></i> Beranda
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="katalog.html">
+        <i class="bi bi-grid"></i> Katalog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="promo.html">
+        <i class="bi bi-tag"></i> Promo
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="testimoni.html">
+        <i class="bi bi-chat-quote"></i> Testimoni
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="tentang.html">
+        <i class="bi bi-info-circle"></i> Tentang
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="kontak.html">
+        <i class="bi bi-envelope"></i> Kontak
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="faq.html">
+        <i class="bi bi-question-circle"></i> FAQ
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-primary mx-1" href="bantuan.html">
+        <i class="bi bi-life-preserver"></i> Bantuan
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-primary mx-1 position-relative" href="keranjang.html">
+        <i class="bi bi-cart"></i> Keranjang
+       <span id="cartBadge"
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+        style="display:none;">0
+       </span>
+     </a>
+    </li>
+  </ul>
+  <button id="btnDarkMode" class="btn btn-sm btn-outline-secondary ms-lg-3">
+    <i class="bi bi-moon"></i> Mode Gelap
+  </button>
+</div>
+</nav>
+  </header>
+  <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content promo-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="promoModalLabel" style="color: black">Promo Spesial BookStore</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2" style="color: black">Diskon hingga 50% untuk buku pilihan minggu ini!</p>
+          <p style="color: black">Gunakan kode:BOOKWEEK saat checkout.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="promo.html" class="btn btn-primary">Lihat Promo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="flex-fill">
+    <section class="hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <article class="col-md-6 mb-4 mb-md-0 hero-text fade-in-up">
+            <h1 class="display-5 fw-bold mb-3">Temukan Buku Favoritmu di BookStore</h1>
+            <p class="lead mb-4">
+              Dari fiksi, non-fiksi, sampai buku pemrograman. Semua ada di satu tempat dengan harga terjangkau.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="katalog.html" class="btn btn-primary btn-lg btn-glow">Jelajahi Katalog</a>
+              <a href="tentang.html" class="btn btn-outline-light btn-lg">Pelajari Tentang Kami</a>
+            </div>
+          </article>
+          <article class="col-md-6 text-center">
+            <img src="images/raakkk.png" width="900px" alt="Ilustrasi rak buku" class="img-fluid hero-image float-animation">
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 highlight-bg">
+  <div class="container">
+    <header class="mb-4 text-white">
+      <h3>Highlight Minggu Ini</h3>
+      <p class="mb-0 opacity-75">
+        Buku-buku pilihan yang paling banyak diminati.
+      </p>
+    </header>
+    <div class="highlight-slider" id="highlightSlider">
+      <div class="highlight-item active">
+        <h3 class="h5" style="color: black;">Paket Buku Pemrograman Lengkap</h3>
+        <p style="color: black;">Belajar HTML, CSS, dan JavaScript dari nol sampai mahir.</p>
+      </div>
+      <div class="highlight-item">
+        <h3 class="h5" style="color: black;">Novel Fiksi Terlaris</h3>
+        <p style="color: black;">Kisah yang bikin kamu betah berjam-jam membaca.</p>
+      </div>
+      <div class="highlight-item">
+        <h3 class="h5" style="color: black;">Buku Pengembangan Diri</h3>
+        <p style="color: black;">Tingkatkan skill dan mindset produktif setiap hari.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 bg-light">
+  <div class="container">
+    <header class="text-center mb-4">
+      <h2 class="fw-bold">Kategori Buku</h2>
+      <p class="text-muted">Pilih sesuai minat bacaanmu</p>
+    </header>
+    <div class="row g-4 text-center">
+      <div class="col-md-3">
+        <a href="katalog.html?kategori=fiksi" class="text-decoration-none">
+          <div class="card h-100 category-card">
+            <img src="images/BUKU.FIKSI.04.webp" class="card-img-top" style="height:200px; object-fit:cover;" alt="Buku Fiksi">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">Buku Fiksi</h5>
+              <p class="text-muted small">Cerita imajinatif & petualangan</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3">
+        <a href="katalog.html?kategori=pelajaran" class="text-decoration-none">
+          <div class="card h-100 category-card">
+            <img src="images/BUKU.PELAJARAN.01.webp" class="card-img-top" style="height:200px; object-fit:cover;" alt="Buku Pelajaran">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">Buku Pelajaran</h5>
+              <p class="text-muted small">Referensi belajar lengkap</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3">
+        <a href="katalog.html?kategori=komik" class="text-decoration-none">
+          <div class="card h-100 category-card">
+            <img src="images/BUKU.KOMIK.01.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Buku Komik">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">Buku Komik</h5>
+              <p class="text-muted small">Komik & manga favorit</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3">
+        <a href="katalog.html?kategori=novel" class="text-decoration-none">
+          <div class="card h-100 category-card">
+            <img src="images/BUKU.NOVEL.01.jpeg" class="card-img-top" style="height:200px; object-fit:cover;" alt="Buku Novel">
+            <div class="card-body">
+              <h5 class="fw-bold text-dark">Buku Novel</h5>
+              <p class="text-muted small">Romantis, misteri, best seller</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="py-5">
+      <div class="container">
+        <header class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h2 class="h3 fw-bold">Buku Pilihan</h2>
+            <p class="text-muted mb-0">Beberapa koleksi terbaik kami untukmu.</p>
+          </div>
+          <a href="katalog.html" class="btn btn-outline-primary">Lihat Semua</a>
+        </header>
+        <div class="row g-4">
+          <article class="col-md-4">
+            <div class="card book-card h-100 hover-rise">
+              <img src="images/BUKU.PELAJARAN.01.webp" class="card-img-top" alt="Buku 1">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Belajar HTML & CSS Dasar</h3>
+                <p class="card-text flex-grow-1">
+                  Panduan visual untuk memahami struktur dan styling web.
+                </p>
+                <p class="text-muted text-decoration-line-through mb-0">Rp130.000</p>
+                <p class="fw-bold mb-2">Rp75.000</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+                  <button class="btn btn-sm btn-primary btn-add-cart" data-buku="Belajar HTML & CSS Dasar"
+                   onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+                    Tambah Keranjang
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-4">
+            <div class="card book-card h-100 hover-rise">
+              <img src="images/BUKU.PELAJARAN.02.jpg" class="card-img-top" alt="Buku 2">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">JavaScript untuk Pemula</h3>
+                <p class="card-text flex-grow-1">
+                  Kuasai dasar-dasar logika dan interaksi web dengan JavaScript.
+                </p>
+                <p class="text-muted text-decoration-line-through mb-0">Rp110.000</p>
+                <p class="fw-bold mb-2">Rp90.000</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+                  <button class="btn btn-sm btn-primary btn-add-cart" data-buku="JavaScript untuk Pemula"
+                   onclick="addToCart('JavaScript untuk Pemula', 90000)">
+                    Tambah Keranjang
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-4">
+            <div class="card book-card h-100 hover-rise">
+              <img src="images/BUKU.PELAJARAN.03.jpg" class="card-img-top" alt="Buku 3">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Web Design Modern</h3>
+                <p class="card-text flex-grow-1">
+                  Belajar membuat tampilan web modern dan responsif.
+                </p>
+                <p class="text-muted text-decoration-line-through mb-0">Rp100.000</p>
+                <p class="fw-bold mb-2">Rp85.000</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <a href="detail-buku.html" class="btn btn-sm btn-outline-primary">Detail</a>
+                  <button class="btn btn-sm btn-primary btn-add-cart" data-buku="Web Design Modern"
+                   onclick="addToCart('Web Design Modern', 85000)">
+                    Tambah Keranjang
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-light">
+  <div class="container">
+    <header class="mb-4">
+      <h2 class="h4 fw-bold">🔥 Best Seller</h2>
+      <p class="text-muted">Paling banyak dibeli pelanggan</p>
+    </header>
+
+   <div class="row g-4">
+  <div class="col-md-3">
+    <div class="card h-100 text-center hover-rise">
+      <img 
+        src="images/BUKU.PELAJARAN.01.webp" 
+        class="card-img-top"
+        style="height:180px; object-fit:contain; padding:10px;"
+      >
+      <div class="card-body py-3">
+        <h6 class="fw-bold mb-1">HTML & CSS Dasar</h6>
+        <p class="text-danger fw-bold mb-2">Rp75.000</p>
+        <button class="btn btn-sm btn-primary"
+          onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+          Beli
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card h-100 text-center hover-rise">
+      <img 
+        src="images/BUKU.PELAJARAN.02.jpg" 
+        class="card-img-top"
+        style="height:180px; object-fit:contain; padding:10px;"
+      >
+      <div class="card-body py-3">
+        <h6 class="fw-bold mb-1">JavaScript Uncover</h6>
+        <p class="text-danger fw-bold mb-2">Rp85.000</p>
+        <button class="btn btn-sm btn-primary"
+          onclick="addToCart('Belajar HTML & CSS Dasar', 85000)">
+          Beli
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card h-100 text-center hover-rise">
+      <img 
+        src="images/BUKU.PELAJARAN.03.jpg" 
+        class="card-img-top"
+        style="height:180px; object-fit:contain; padding:10px;"
+      >
+      <div class="card-body py-3">
+        <h6 class="fw-bold mb-1">C++ & Java</h6>
+        <p class="text-danger fw-bold mb-2">Rp75.000</p>
+        <button class="btn btn-sm btn-primary"
+          onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+          Beli
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card h-100 text-center hover-rise">
+      <img 
+        src="images/BUKU.PELAJARAN.04.jpg" 
+        class="card-img-top"
+        style="height:180px; object-fit:contain; padding:10px;"
+      >
+      <div class="card-body py-3">
+        <h6 class="fw-bold mb-1">Python & Pandas</h6>
+        <p class="text-danger fw-bold mb-2">Rp75.000</p>
+        <button class="btn btn-sm btn-primary"
+          onclick="addToCart('Belajar HTML & CSS Dasar', 75000)">
+          Beli
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+  </main>
+  <section class="py-5">
+  <div class="contgainer">
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <h1>📦</h1>
+        <h6>Pengiriman Cepat</h6>
+        <p class="text-muted small">Diproses dalam 24 jam</p>
+      </div>
+      <div class="col-md-3">
+        <h1>💳</h1>
+        <h6>Pembayaran Aman</h6>
+        <p class="text-muted small">100% aman & terpercaya</p>
+      </div>
+      <div class="col-md-3">
+        <h1>⭐</h1>
+        <h6>Produk Berkualitas</h6>
+        <p class="text-muted small">Pilihan terbaik</p>
+      </div>
+      <div class="col-md-3">
+        <h1>📞</h1>
+        <h6>Layanan 24/7</h6>
+        <p class="text-muted small">Siap membantu</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer class="py-4 bg-dark text-light mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2025 BookNest. Semua hak cipta dilindungi.</p>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="https://www.google.com" target="_blank" class="text-decoration-none text-light">
+          Kunjungi Google
+        </a>
+        <a href="faq.html" class="text-decoration-none text-light">FAQ</a>
+        <a href="bantuan.html" class="text-decoration-none text-light">Pusat Bantuan</a>
+      </div>
+    </div>
+  </footer>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
